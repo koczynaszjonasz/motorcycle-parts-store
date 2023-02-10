@@ -1,0 +1,170 @@
+prompt --application/pages/page_00038
+begin
+--   Manifest
+--     PAGE: 00038
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>25142937697737223804
+,p_default_application_id=>23067
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_MYSZARD'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>38
+,p_name=>'Wyszukanie Dostawcow'
+,p_alias=>'WYSZUKANIE-DOSTAWCOW1'
+,p_step_title=>'Wyszukanie Dostawcow'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+,p_last_updated_by=>'JONASZ2105@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20230111231053'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(39155271350176670343)
+,p_plug_name=>'Wyszukanie Dostawcow'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(25195855485177863063)
+,p_plug_display_sequence=>10
+,p_query_type=>'TABLE'
+,p_query_table=>'DOSTAWCY'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_page_header=>'Wyszukanie Dostawcow'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(39155271405303670343)
+,p_name=>'Wyszukanie Dostawcow'
+,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+,p_no_data_found_message=>'No data found.'
+,p_base_pk1=>'NIP'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'C'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_detail_link=>'f?p=&APP_ID.:39:&APP_SESSION.::&DEBUG.:RP:P39_NIP:\#NIP#\'
+,p_detail_link_text=>'<span aria-label="Edit"><span class="fa fa-edit" aria-hidden="true" title="Edit"></span></span>'
+,p_owner=>'MACIEKZAK550@GMAIL.COM'
+,p_internal_uid=>39155271405303670343
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(39155271899411670344)
+,p_db_column_name=>'NIP'
+,p_display_order=>0
+,p_column_identifier=>'A'
+,p_column_label=>'Nip'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(39155272227769670345)
+,p_db_column_name=>'NUMER_KONTA'
+,p_display_order=>2
+,p_column_identifier=>'B'
+,p_column_label=>'Numer Konta'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(39155272633646670345)
+,p_db_column_name=>'NAZWA_DOSTAWCY'
+,p_display_order=>3
+,p_column_identifier=>'C'
+,p_column_label=>'Nazwa Dostawcy'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(39155273091212670345)
+,p_db_column_name=>'LOKALIZACJA'
+,p_display_order=>4
+,p_column_identifier=>'D'
+,p_column_label=>'Lokalizacja'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(39155273429730670346)
+,p_db_column_name=>'REGON'
+,p_display_order=>5
+,p_column_identifier=>'E'
+,p_column_label=>'Regon'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(39156422354804341648)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'391564224'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'NIP:NUMER_KONTA:NAZWA_DOSTAWCY:LOKALIZACJA:REGON'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(39155275648877670347)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(25195877711652863073)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_imp.id(25195361961967863016)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_imp.id(25195939834312863106)
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(39155273958348670346)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(39155271350176670343)
+,p_button_name=>'CREATE'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_imp.id(25195938296627863106)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Create'
+,p_button_position=>'RIGHT_OF_IR_SEARCH_BAR'
+,p_button_redirect_url=>'f?p=&APP_ID.:39:&APP_SESSION.::&DEBUG.:39::'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(39155274232287670346)
+,p_name=>'Edit Report - Dialog Closed'
+,p_event_sequence=>10
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_imp.id(39155271350176670343)
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'apexafterclosedialog'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(39155274719255670346)
+,p_event_id=>wwv_flow_imp.id(39155274232287670346)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(39155271350176670343)
+);
+wwv_flow_imp.component_end;
+end;
+/
